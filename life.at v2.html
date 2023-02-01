@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+          <link rel="stylesheet" type="text/css" href="life.at v2.css"/>
+    </head>
+
+    <body>
+
+        <div id="background">
+            <img id="gif" src="https://media.giphy.com/media/3ohhwNqFMnb7wZgNnq/giphy.gif">
+        </div>
+    
+        <div id="timer"></div>
+        <script id="timer">
+          function startTimer(duration, display) {
+            var timer = duration, minutes, seconds;
+            setInterval(function () {
+              minutes = parseInt(timer / 60, 10)
+              seconds = parseInt(timer % 60, 10);
+    
+              minutes = minutes < 10 ? "0" + minutes : minutes;
+              seconds = seconds < 10 ? "0" + seconds : seconds;
+    
+              display.textContent = minutes + ":" + seconds;
+    
+              if (--timer < 0) {
+                timer = duration;
+              }
+            }, 1000);
+          }
+    
+          window.onload = function () {
+            var thirtyMinutes = 60 * 30,
+              display = document.querySelector('#timer');
+            startTimer(thirtyMinutes, display);
+          };
+        </script>
+
+        <table widght="200" border="1" align="left" cellspacing="0">
+            <tbody>
+                
+                <tr>
+                    <td width="200" height="1000" align="left" valing="top">
+                        <h1 id="manzara">Manzaranı seç!</h1>
+                        
+                        <br>
+                        <br><button onclick="document.getElementById('gif').src='https://thumbs.gfycat.com/ShadowyHonorableBluemorphobutterfly-size_restricted.gif'" id="gifler1">Gökyüzü</button>
+                        <br><button onclick="document.getElementById('gif').src='https://www.evlilikteklifiankara.com/wp-content/uploads/2019/03/romantik-aksam-1.gif'" id="gifler2">Şömine</button>
+                        <br><button onclick="document.getElementById('gif').src='https://miro.medium.com/max/1000/1*sCRWfGL8H3XDR5kloSEAcQ.gif'" id="gifler3">Karlı Hava</button>
+                        <br><button onclick="document.getElementById('gif').src='https://media.tenor.com/cT39AOuvztEAAAAM/candles-window.gif'" id="gifler4">Yağmurlu hava</button>
+                        <br><button onclick="document.getElementById('gif').src='https://thumbs.gfycat.com/BothDentalChihuahua-size_restricted.gif'" id="gifler5">Sahil Manzarası</button>
+                        <br><br>
+                        <h1 id="instagramyazı">İnstagramdan bizi takip edin</h1>
+                        <br><br>
+                        <a href="https://www.instagram.com/irem.b0/" ><img id="instagramlink" src="https://play-lh.googleusercontent.com/9ASiwrVdio0I2i2Sd1UzRczyL81piJoKfKKBoC8PUm2q6565NMQwUJCuNGwH-enhm00" alt="instagram hesabımız"></a>
+                    </td>
+
+                </tr>
+               
+                <tr>
+                
+                   
+                </tr>
+
+            </tbody>
+        </table>
+        
+    </body>
+</html>
